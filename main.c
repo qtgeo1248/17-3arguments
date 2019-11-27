@@ -8,5 +8,6 @@ int main(int argc, char *arbv[]) {
     buf[strlen(buf) - 1] = 0;
     test = buf;
     char **args = parse_args(test);
+    execvp(args[0], args);
     return 0;
 }
