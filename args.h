@@ -11,3 +11,4 @@
 #include <unistd.h>
 
 char **parse_args(char *line);
+void free_args(char **args);

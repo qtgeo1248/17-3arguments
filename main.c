@@ -9,10 +9,6 @@ int main(int argc, char *arbv[]) {
     test = buf;
     char **args = parse_args(test);
     execvp(args[0], args);
-
-    int i = 0;
-    for (; args[i] != NULL; i++) {
-        free(args[i]);
-    }
+    free_args(args);
     return 0;
 }
