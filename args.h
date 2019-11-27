@@ -9,3 +9,5 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <unistd.h>
+
+char **parse_args(char *line);

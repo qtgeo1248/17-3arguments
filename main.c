@@ -1,6 +1,16 @@
 #include "args.h"
 
-int main() {
-    
+int main(int argc, char *arbv[]) {
+    char *test;
+    char buf[1000];
+    printf("Please input a program:\n");
+    fgets(buf, 1000, stdin);
+    buf[strlen(buf) - 1] = 0;
+    test = buf;
+
+    char **args = parse_args(test);
+    printf("%s\n", args[0]);
+    printf("%s\n", args[1]);
+
     return 0;
 }
